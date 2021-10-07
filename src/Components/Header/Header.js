@@ -51,6 +51,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     },
   },
 }));
+ 
 
 export default function SearchAppBar() {
   return (
@@ -64,7 +65,7 @@ export default function SearchAppBar() {
             aria-label="open drawer"
             sx={{ mr: 2 }}
           >
-            <MenuIcon />
+          
           </IconButton>
           <Typography
             variant="h6"
