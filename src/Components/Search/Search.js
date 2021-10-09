@@ -13,7 +13,6 @@ import axios from "axios";
 
 const Search = () => {
   const [type, setType] = useState(0);
-  const [value, setValue] = useState("1");
   const [searchText, setsearchText] = useState("");
   const [content, setcontent] = useState();
 
@@ -21,29 +20,34 @@ const Search = () => {
     palette: {
       mode: "dark",
       primary: {
+        main: "#fff",
+      },
+      secondary: {
         main: "#ff7f50",
       },
     },
   });
 
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  const fetchSearch = async () => {
-    try {
-      const { data } = await axios.get(
-        `https://api.themoviedb.org/3/search/${type ? "tv" : "movie"}?api_key=${
-          process.env.REACT_APP_API_KEY
-        }&language=en-US&query=${searchText}&page=1&include_adult=false`
-      );
-      setcontent(data.results);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
   useEffect(() => {
     window.scroll(0, 0);
+
+    const fetchSearch = async () => {
+      try {
+        const { data } = await axios.get(
+          `https://api.themoviedb.org/3/search/${
+            type ? "tv" : "movie"
+          }?api_key=${
+            process.env.REACT_APP_API_KEY
+          }&language=en-US&query=${searchText}&page=1&include_adult=false`
+        );
+        setcontent(data.results);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
     fetchSearch();
-  }, [fetchSearch, type]);
+  }, [type, searchText]);
 
   return (
     <div>
@@ -57,15 +61,6 @@ const Search = () => {
                 className="searchBox"
                 onChange={(e) => setsearchText(e.target.value)}
               />
-            </Grid>
-            <Grid item xs={1}>
-              <Button
-                variant="contained"
-                className="searchButton"
-                onClick={fetchSearch}
-              >
-                <SearchIcon />
-              </Button>
             </Grid>
           </Grid>
         </Box>
@@ -84,16 +79,13 @@ const Search = () => {
         </Box>
       </ThemeProvider>
       <div className="pageContent">
-        {content &&
+        {searchText &&
+          content &&
           content.map((c) => (
             <SingleContent
               key={c.id}
-              id={c.id}
-              poster={c.poster_path}
-              title={c.title || c.name}
-              date={c.first_air_date || c.release_date}
-              media_type={type ? "tv" : "movie"}
-              vote_average={c.vote_average}
+              dataItem={c}
+              type={type ? "tv" : "movie"}
             />
           ))}
       </div>

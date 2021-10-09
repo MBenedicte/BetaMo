@@ -1,4 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300&display=swap");
+
 .navbar {
   background-color: #1e1e1f !important;
   position: "fixed";
+}
+
+.beta {
+  color: #fff;
+  font-family: "Montserrat", sans-serif !important;
+}
+
+.movie {
+  color: #ff7f50;
+  font-family: "Montserrat", sans-serif !important;
 }
