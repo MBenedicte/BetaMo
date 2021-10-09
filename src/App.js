@@ -1,14 +1,33 @@
 import './App.css';
-import {Cover, Header} from '../src/Components';
-
+import {Header} from '../src/Components';
+import SimpleBottomNavigation from './Components/BottomNavbar';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { Container } from '@mui/material';
+import Favorite from './Components/Favorite/Favorite';
+import WatchLater from './Components/WatchLater/WatchLater';
+import { Cover } from '../src/Components';
 
 
 function App() {
   return (
-    <div className="App">
+    <BrowserRouter>
+      
         <Header/>
-        <Cover/>
-    </div>
+        <div className="App">
+          <Container>
+            <Switch>
+              <Route path='/' component={Cover} exact/>
+              <Route path='/favorites' component={Favorite}/>
+              <Route path='/watchlater' component={WatchLater}/>
+            </Switch>
+          </Container>
+        </div>
+          
+        
+        <SimpleBottomNavigation/>   
+     
+      
+    </BrowserRouter>
   );
 }
 
