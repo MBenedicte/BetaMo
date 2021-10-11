@@ -1,0 +1,19 @@
+.pageContent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-top: 10px;
+}
+
+.pageTitle {
+  padding: 20px 0 10px 0;
+  font-size: 30px;
+  color: coral;
+  border-bottom: white 1px solid;
+}
+
+@media (max-width: 550px) {
+  .pageTitle {
+    font-size: 25px;
+  }
+}

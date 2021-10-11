@@ -1,3 +1,4 @@
 .navbar {
-  background-color: rgb(42, 42, 59) !important;
+  background-color: #1e1e1f !important;
+  position: "fixed";
 }
