@@ -1,70 +1,45 @@
-# Getting Started with Create React App
+# BetaMovie
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+BetaMovie is a application that helps a user to find trending movies as well as tv series without creating a user account. It also links a user to a real website where they can find their prefered movies and tv series. All a user have to do is to search her prefered movie/tv-series.
 
-## Available Scripts
+BetaMovie works well on PCs as well as on mobilephones.
 
-In the project directory, you can run:
+## How to use BetaMovie
 
-### `npm start`
+When the user open the application, she lands on list of trending movie and trending series. From the list, she can see details of every movie/tv-serie, she can add the movie/tv-serie in her favorites or/and in her watchList.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The user can see her favorites movie/tv-serie, depending on which she selected.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+The user can see her watchlist movie/tv-serie, depending on which she selected to watch later.
 
-### `npm test`
+The user can also search for a movie/tv-serie by typing its name in search field.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## How to access it?
 
-### `npm run build`
+Local:
+clone the repository, run `npm start` , it will automatically open `Localhost:3000` link, then you can try BetaMovie.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Remote:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Technologies
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+DATA:
 
-### `npm run eject`
+- TMDB API
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+DESIGN:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- REACT
+- MATERIAL-UI
+- CSS
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+TESTING:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- JEST
+- TESTING-LIBRARY
 
-## Learn More
+## Commands
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+`npm start` : To open the localhost
+`npm test` : To run the tests
+`npm run test -- --coverage` : Tun tests with coverage
