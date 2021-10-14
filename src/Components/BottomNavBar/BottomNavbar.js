@@ -27,8 +27,8 @@ export default function SimpleBottomNavigation() {
   React.useEffect(() => {
     if (value === 0) history.push("/trending");
     else if (value === 1) history.push("/favorites");
-    else if (value === 2) history.push("/watchlater");
-    else if (value === 2) history.push("/search");
+    else if (value === 2) history.push("/watchlist");
+    else if (value === 3) history.push("/search");
   }, [value, history]);
 
   return (
@@ -43,10 +43,9 @@ export default function SimpleBottomNavigation() {
       >
         <BottomNavigationAction
           style={{ color: "white" }}
-          label="Search"
+          label="Trending"
           icon={<WhatshotIcon />}
         />
-
         <BottomNavigationAction
           style={{ color: "white" }}
           label="Favorites"
@@ -54,7 +53,7 @@ export default function SimpleBottomNavigation() {
         />
         <BottomNavigationAction
           style={{ color: "white" }}
-          label="Watch later"
+          label="Watch list"
           icon={<WatchLaterIcon />}
         />
         <BottomNavigationAction
