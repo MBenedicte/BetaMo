@@ -21,6 +21,8 @@ clone the repository, run `npm start` , it will automatically open `Localhost:30
 
 Remote:
 
+https://develop.d1rkbejnahkb8m.amplifyapp.com/trending 
+
 ## Technologies
 
 DATA:
