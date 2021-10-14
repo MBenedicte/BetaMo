@@ -5,7 +5,6 @@ import BottomNavigationAction from "@mui/material/BottomNavigationAction";
 import WhatshotIcon from "@mui/icons-material/Whatshot";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import WatchLaterIcon from "@mui/icons-material/WatchLater";
-import MovieIcon from "@mui/icons-material/Movie";
 import SearchIcon from "@mui/icons-material/Search";
 import { makeStyles } from "@mui/styles";
 import { useHistory } from "react-router";
@@ -28,7 +27,7 @@ export default function SimpleBottomNavigation() {
   React.useEffect(() => {
     if (value === 0) history.push("/trending");
     else if (value === 1) history.push("/favorites");
-    else if (value === 2) history.push("/watchlater");
+    else if (value === 2) history.push("/watchlist");
     else if (value === 3) history.push("/search");
   }, [value, history]);
 
@@ -54,7 +53,7 @@ export default function SimpleBottomNavigation() {
         />
         <BottomNavigationAction
           style={{ color: "white" }}
-          label="Watch later"
+          label="Watch list"
           icon={<WatchLaterIcon />}
         />
         <BottomNavigationAction
