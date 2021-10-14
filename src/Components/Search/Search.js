@@ -1,11 +1,11 @@
-import { Button, createTheme, TextField } from "@mui/material";
+import { createTheme, TextField } from "@mui/material";
 import { ThemeProvider } from "@mui/material";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import React, { useState, useEffect } from "react";
-import SearchIcon from "@mui/icons-material/Search";
+
 import "./Search.css";
 import "../Shared/Shared.css";
 import SingleContent from "../SingleContent/SingleContent";
@@ -67,7 +67,7 @@ const Search = () => {
         <Box sx={{ width: "100%" }} className="boxType">
           <Tabs
             value={type}
-            textColor="white"
+            textColor="primary"
             centered
             onChange={(event, newValue) => {
               setType(newValue);

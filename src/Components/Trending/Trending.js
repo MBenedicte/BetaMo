@@ -45,18 +45,18 @@ const Trending = () => {
         <Box sx={{ width: "100%" }} className="boxType">
           <Tabs
             value={type}
-            textColor="white"
+            textColor="primary"
             centered
             onChange={(event, newValue) => {
               setType(newValue);
             }}
           >
-            <Tab label="Search Movie" style={{ width: "50%" }} />
-            <Tab label="Search TV Series" style={{ width: "50%" }} />
+            <Tab label="Movie" style={{ width: "50%" }} />
+            <Tab label="TV Series" style={{ width: "50%" }} />
           </Tabs>
         </Box>
       </ThemeProvider>
-      <div className="pageContent">
+      <div className="pageContent" data-testid="singleContent">
         {content &&
           content.map((c) => (
             <SingleContent key={c.id} dataItem={c} type={c.media_type} />

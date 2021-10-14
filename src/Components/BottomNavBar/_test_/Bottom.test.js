@@ -4,7 +4,7 @@ import React from "react";
 import { createMemoryHistory } from "history";
 import { Router } from "react-router-dom";
 
-describe("Renders BottomNavbar component", () => {
+describe("BottomNavbar component", () => {
   it("should trigger the path change to trending", async () => {
     const history = createMemoryHistory();
 
@@ -38,7 +38,7 @@ describe("Renders BottomNavbar component", () => {
       </Router>
     );
 
-    fireEvent.click(getByText(/watch later/i));
+    fireEvent.click(getByText(/Watch list/i));
     expect(history.length).toBe(3);
   });
 
