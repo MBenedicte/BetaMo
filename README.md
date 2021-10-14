@@ -40,6 +40,6 @@ TESTING:
 
 ## Commands
 
-`npm start` : To open the localhost
-`npm test` : To run the tests
-`npm run test -- --coverage` : Tun tests with coverage
+- `npm start` : To open the localhost
+- `npm test` : To run the tests
+- `npm run test -- --coverage` : Tun tests with coverage
